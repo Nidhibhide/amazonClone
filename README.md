@@ -65,10 +65,4 @@ npm run build
 ## Contribution
 Feel free to contribute to this project. Fork the repo, create a new branch, and submit a pull request.
 
-## License
-This project is open-source and available under the MIT License.
-
----
-
-This README provides a structured overview of the Amazon Clone project, including folder organization, installation steps, Git commands, and deployment instructions.
 
