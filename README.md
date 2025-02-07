@@ -16,8 +16,8 @@ This is a fully responsive **Amazon Clone** built with **React.js** and **Tailwi
 ## Installation & Setup
 ### Step 1: Clone the Repository
 ```sh
-git clone https://github.com/yourusername/amazon-clone.git
-cd amazon-clone
+git clone https://github.com/Nidhibhide/amazonClone.git
+cd amazonClone
 ```
 
 ### Step 2: Install Dependencies
