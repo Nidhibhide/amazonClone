@@ -67,7 +67,7 @@ const Navbar = () => {
         </button>
       </div>
       {item && (
-        <div className=" absolute top-[7%] left-[22%] w-auto h-auto  bg-[#fffafa] shadow-2xl rounded-lg  px-1 py-2">
+        <div className=" absolute top-[7%] left-[22%] w-auto h-auto  bg-[#191616] shadow-2xl rounded-lg  px-1 py-2">
           <ItemList changeItem={handleItemState} />
         </div>
       )}
