@@ -72,7 +72,7 @@ const Navbar = () => {
         </div>
       )}
       {/* end section */}
-      <div className="w-[26%] flex gap-4 items-center justify-center">
+      <div className="w-[26%] flex gap-3 items-center justify-center">
         <div
           className="flex hover:border border-white items-center px-2 py-4"
           onMouseEnter={() => {

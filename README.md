@@ -1,8 +1,68 @@
-# React + Vite
+# Amazon Clone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a fully responsive **Amazon Clone** built with **React.js** and **Tailwind CSS**. The project includes authentication, product listing, a shopping cart, and a checkout system.
 
-Currently, two official plugins are available:
+## Features
+- User Authentication (Login, Register, Logout)
+- Product Listing with Categories
+- Product Details Page
+- Shopping Cart (Add, Remove, Update Items)
+- Checkout Process with Payment Integration
+- Order History for Users
+- Fully Responsive Design using Tailwind CSS
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+
+## Installation & Setup
+### Step 1: Clone the Repository
+```sh
+git clone https://github.com/Nidhibhide/amazonClone.git
+cd amazonClone
+```
+
+### Step 2: Install Dependencies
+```sh
+npm install
+```
+
+### Step 3: Install Tailwind CSS
+```sh
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+```
+
+### Step 4: Configure Tailwind CSS
+Edit `tailwind.config.js` to include content paths:
+```js
+export default {
+  content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
+```
+
+### Step 5: Add Tailwind Directives to CSS
+Add the following to `src/styles/globals.css`:
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+### Step 6: Start the Development Server
+```sh
+npm run dev
+```
+
+## Deployment
+### Build for Production
+```sh
+npm run build
+```
+
+## Contribution
+Feel free to contribute to this project. Fork the repo, create a new branch, and submit a pull request.
+
+
