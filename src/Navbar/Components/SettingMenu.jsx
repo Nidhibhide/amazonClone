@@ -3,7 +3,7 @@ import React from 'react'
 const SettingMenu = ({handleLangDataState}) => {
   return (
     <div
-            className="absolute top-[8%] left-[65%] bg-[#fffafa] p-5 shadow-2xl h-auto w-auto rounded-md"
+            className="fixed top-[8%] left-[65%] bg-[#fffafa] p-5 shadow-2xl h-auto w-auto rounded-md"
             onMouseLeave={handleLangDataState}
           >
             <div className=" bg-[#d8e6e6] p-4 flex rounded-xl gap-28">

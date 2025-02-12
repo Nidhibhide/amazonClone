@@ -23,6 +23,16 @@ const Navbar = () => {
     setLang(false);
   };
 
+  const handleConflict = (event) => {
+    if (lang) {
+      setLang(false);
+      setData(true);
+    } else {
+      setData(false);
+      setLang(true);
+    }
+  };
+
   return (
     <div className="flex h-20 bg-black sticky top-0 ">
       {/* 1st section */}
@@ -67,7 +77,7 @@ const Navbar = () => {
         </button>
       </div>
       {item && (
-        <div className=" absolute top-[7%] left-[22%] w-auto h-auto  bg-[#191616] shadow-2xl rounded-lg  px-1 py-2">
+        <div className=" fixed top-[6%] left-[22%] w-auto h-auto   shadow-2xl rounded-lg  px-1 py-2">
           <ItemList changeItem={handleItemState} />
         </div>
       )}
@@ -75,9 +85,10 @@ const Navbar = () => {
       <div className="w-[26%] flex gap-3 items-center justify-center">
         <div
           className="flex hover:border border-white items-center px-2 py-4 cursor-pointer"
-          onMouseEnter={() => {
-            setLang(true);
-          }}
+          // onMouseEnter={() => {
+          //   setLang(true);
+          // }}
+          onMouseEnter={handleConflict}
         >
           <img src={world} className="object-cover h-7 w-7 mr-1"></img>
           <p className="text-white text-lg font-bold">EN</p>
@@ -86,15 +97,16 @@ const Navbar = () => {
           </span>
         </div>
         {lang && (
-          <div className=" absolute h-auto w-auto top-[7%] left-[73%]  bg-[#fffafa] shadow-2xl rounded-lg  px-4 py-4 ">
+          <div className="fixed h-auto w-auto top-[8%] left-[73%]  bg-[#fffafa] shadow-2xl rounded-lg  px-4 py-4 ">
             <LangList handleLangState={handleLangDataState} />
           </div>
         )}
         <div
           className="hover:border border-white  p-2 flex items-center cursor-pointer"
-          onMouseEnter={() => {
-            setData(true);
-          }}
+          // onMouseEnter={() => {
+          //   setData(true);
+          // }}
+          onMouseEnter={handleConflict}
         >
           <div className="-space-y-1">
             <p className="text-white text-base ">Hello,Nidhi</p>
@@ -105,9 +117,7 @@ const Navbar = () => {
             <GoTriangleDown />
           </span>
         </div>
-        {data && (
-       <SettingMenu handleLangDataState={handleLangDataState}/>
-        )}
+        {data && <SettingMenu handleLangDataState={handleLangDataState} />}
 
         <div className="hover:border border-white -space-y-1 p-2">
           <p className="text-white text-base ">Returns</p>
