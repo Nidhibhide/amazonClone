@@ -81,7 +81,7 @@ const MidFooter = () => {
 
           {lang && (
             <div className=" absolute bottom-0 bg-red-800">
-              <LangList handleLangState={handleLangState} />
+              {/* <LangList handleLangState={handleLangState} /> */}
             </div>
           )}
 
