@@ -24,7 +24,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="flex h-20 bg-black ">
+    <div className="flex h-20 bg-black sticky top-0 ">
       {/* 1st section */}
       <div className="w-[20%] flex   items-center justify-center ">
         <div className="w-1/2 ">
@@ -74,7 +74,7 @@ const Navbar = () => {
       {/* end section */}
       <div className="w-[26%] flex gap-3 items-center justify-center">
         <div
-          className="flex hover:border border-white items-center px-2 py-4"
+          className="flex hover:border border-white items-center px-2 py-4 cursor-pointer"
           onMouseEnter={() => {
             setLang(true);
           }}
@@ -91,7 +91,7 @@ const Navbar = () => {
           </div>
         )}
         <div
-          className="hover:border border-white  p-2 flex items-center"
+          className="hover:border border-white  p-2 flex items-center cursor-pointer"
           onMouseEnter={() => {
             setData(true);
           }}
