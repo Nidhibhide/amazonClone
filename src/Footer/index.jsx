@@ -5,7 +5,7 @@ import RightSection from "./Components/RightsSection";
 
 const Footer = () => {
   return (
-    <div className="flex flex-col mt-[50%]">
+    <div className="flex flex-col">
       {/* back to top */}
       <div>
         <BackTop />

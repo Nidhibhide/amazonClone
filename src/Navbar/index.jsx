@@ -34,7 +34,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="flex h-20 bg-black sticky top-0 ">
+    <div className="flex h-20 bg-black sticky top-0 z-10 ">
       {/* 1st section */}
       <div className="w-[20%] flex   items-center justify-center ">
         <div className="w-1/2 ">
