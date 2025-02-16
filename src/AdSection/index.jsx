@@ -1,18 +1,16 @@
-import React from 'react'
-import TopAd from "./Components/TopAd"
-import MainAdd from "./Components/MainAdd"
-import Carousel from"./Components/Carousel"
-import FashionAd from "./Components/FashionAd"
+import React from "react";
+import TopAd from "./Components/TopAd";
+import MainAdd from "./Components/MainAdd";
+import Carousel from "./Components/Carousel";
 
 const index = () => {
   return (
-   <>
-   <MainAdd/>
-<TopAd/>
-{/* <Carousel/> */}
-<FashionAd/>
-   </>
-  )
-}
+    <>
+      <MainAdd />
+      <TopAd/>
+      <Carousel />
+    </>
+  );
+};
 
-export default index
+export default index;

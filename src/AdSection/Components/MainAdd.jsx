@@ -5,7 +5,10 @@ const MainAdd = () => {
   return (
     <>
       <div className=" bg-gray-400 relative">
-        <img src={adImage} className=" w-full h-96 object-cover object-top"></img>
+        <img
+          src={adImage}
+          className=" w-full h-96 object-cover object-top"
+        ></img>
         <div className="bg-white p-2 flex justify-center text-lg absolute top-[75%] left-[20%] ">
           <p>
             You are on amazon.com. You can also shop on Amazon India for

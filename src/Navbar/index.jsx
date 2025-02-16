@@ -18,18 +18,13 @@ const Navbar = () => {
     setItem(false);
   };
 
-  const handleLangDataState = (event) => {
-    setData(false);
-    setLang(false);
-  };
-
+  const hoverBorder = "hover:border border-white";
   const handleConflict = (event) => {
     if (lang) {
       setLang(false);
-      setData(true);
-    } else {
+    }
+    if (data) {
       setData(false);
-      setLang(true);
     }
   };
 
@@ -39,12 +34,12 @@ const Navbar = () => {
       <div className="w-[20%] flex   items-center justify-center ">
         <div className="w-1/2 ">
           <img
-            className="h-14 w-44 object-cover hover:border border-white"
+            className={`h-14 w-44 object-cover ${hoverBorder}`}
             src={amazon_logo}
             alt="amazon logo"
           />
         </div>
-        <div className="w-1/2 flex  gap-1 hover:border border-white  py-2">
+        <div className={`w-1/2 flex gap-1 py-2 ${hoverBorder}`}>
           <span className="text-white text-3xl ">
             <IoLocationOutline />
           </span>
@@ -84,11 +79,10 @@ const Navbar = () => {
       {/* end section */}
       <div className="w-[26%] flex gap-3 items-center justify-center">
         <div
-          className="flex hover:border border-white items-center px-2 py-4 cursor-pointer"
-          // onMouseEnter={() => {
-          //   setLang(true);
-          // }}
-          onMouseEnter={handleConflict}
+          className={`flex items-center px-2 py-4 cursor-pointer ${hoverBorder}`}
+          onMouseEnter={() => {
+            setLang(true);
+          }}
         >
           <img src={world} className="object-cover h-7 w-7 mr-1"></img>
           <p className="text-white text-lg font-bold">EN</p>
@@ -98,15 +92,14 @@ const Navbar = () => {
         </div>
         {lang && (
           <div className="fixed h-auto w-auto top-[8%] left-[73%]  bg-[#fffafa] shadow-2xl rounded-lg  px-4 py-4 ">
-            <LangList handleLangState={handleLangDataState} />
+            <LangList handleConflict={handleConflict} />
           </div>
         )}
         <div
           className="hover:border border-white  p-2 flex items-center cursor-pointer"
-          // onMouseEnter={() => {
-          //   setData(true);
-          // }}
-          onMouseEnter={handleConflict}
+          onMouseEnter={() => {
+            setData(true);
+          }}
         >
           <div className="-space-y-1">
             <p className="text-white text-base ">Hello,Nidhi</p>
@@ -117,13 +110,13 @@ const Navbar = () => {
             <GoTriangleDown />
           </span>
         </div>
-        {data && <SettingMenu handleLangDataState={handleLangDataState} />}
+        {data && <SettingMenu handleConflict={handleConflict} />}
 
         <div className="hover:border border-white -space-y-1 p-2">
           <p className="text-white text-base ">Returns</p>
           <p className="text-white text-lg font-bold">& Orders</p>
         </div>
-        <div className="flex items-end hover:border border-white p-1">
+        <div className={`flex items-end p-1 ${hoverBorder}`}>
           <span className="text-white text-5xl">
             <IoCart />
           </span>
